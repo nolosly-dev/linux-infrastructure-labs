@@ -24,5 +24,7 @@ This repository serves as my hands-on technical portfolio—documenting producti
 | :--- | :--- | :--- |
 | **`00-infrastructure-and-git`** | Headless QEMU/KVM architecture, Tailscale mesh VPN, SSH keys, Git workflow | ✅ Completed |
 | **`01-shell-and-permissions`** | Shell Redirection (`tee`), POSIX ACLs, SUID/SGID, `sudoers` privileges | 🔄 Active |
-| **`02-storage-and-lvm`** | `fstab` recovery, LVM volume groups, disk expansion, Swap management | ⏳ Pending |
+| **`06-storage-and-lvm`** | `fstab` recovery, LVM volume groups, disk expansion, Swap management | ⏳ Pending |
 | **`03-systemd-and-services`** | Custom unit files, `journalctl` audits, service overrides, socket activation | ⏳ Pending |
+
+test
