@@ -55,13 +55,9 @@ This repository is structured into domain-specific modules. Each directory conta
 
 Incident write-ups inside each module follow an enterprise First Contact Resolution (FCR) workflow:
 
-  
+Read and Parse > Audit System > Isolate Fix > Verify as User
 
-$$\text{Read \& Parse} \longrightarrow \text{Audit System} \longrightarrow \text{Isolate Fix} \longrightarrow \text{Verify as User}$$
-
-Every report contains:
-
-  
+Every report contains:  
 
 1. **Ticket Metadata & Context:** Priority, affected user roles, and raw user complaint.
     
