@@ -42,14 +42,14 @@ This repository is structured into domain-specific modules. Each directory conta
 
   
 
-|**Domain Module**|**Core Competencies**|**Directory Link**|
-|---|---|---|
-|**00: Infrastructure & Git**|Headless QEMU/KVM architecture, local SSH keys, Git workflows, snapshot state recovery.|[`./00-infrastructure-and-git`](https://www.google.com/search?q=./00-infrastructure-and-git/)|
-|**01: Users & Permissions**|POSIX ownership (`chmod`/`chown`), extended POSIX ACLs (`getfacl`/`setfacl`), special bits (SGID, Sticky), `sudoers` privileges.|[`./01-users-and-permissions`](https://www.google.com/search?q=./01-users-and-permissions/)|
-|**02: Process & System Control**|`systemd` unit files, service recovery, process signal handling (`kill`/`pkill`), `journalctl` triage, resource monitoring.|[`./02-process-and-system-control`](https://www.google.com/search?q=./02-process-and-system-control/)|
-|**03: Storage & Filesystems**|Disk partitioning (`fstab`), mount management, LVM volume expansion, filesystem integrity, disk space alerts.|[`./03-storage-and-filesystems`](https://www.google.com/search?q=./03-storage-and-filesystems/)|
-|**04: Networking & Services**|Socket state inspection (`ss`), interface management (`ip`), DNS resolution (`dig`/`nslookup`), SSH configuration.|[`./04-networking-and-services`](https://www.google.com/search?q=./04-networking-and-services/)|
-|**05: Firewalls & Security**|`firewalld` rule management, port bindings, service exposure, base SELinux state triage.|[`./05-firewalls-and-security`](https://www.google.com/search?q=./05-firewalls-and-security/)|
+| Domain Module | Core Competencies | Directory Link |
+| :--- | :--- | :--- |
+| **00: Infrastructure & Git** | Headless QEMU/KVM architecture, local SSH keys, Git workflows, snapshot state recovery. | [00-infrastructure-and-git](./00-infrastructure-and-git/) |
+| **01: Users & Permissions** | POSIX ownership (`chmod`/`chown`), extended POSIX ACLs (`getfacl`/`setfacl`), special bits (SGID, Sticky), `sudoers` privileges. | [01-users-and-permissions](./01-users-and-permissions/) |
+| **02: Process & System Control** | `systemd` unit files, service recovery, process signal handling (`kill`/`pkill`), `journalctl` triage, resource monitoring. | [02-process-and-system-control](./02-process-and-system-control/) |
+| **03: Storage & Filesystems** | Disk partitioning (`fstab`), mount management, LVM volume expansion, filesystem integrity, disk space alerts. | [03-storage-and-filesystems](./03-storage-and-filesystems/) |
+| **04: Networking & Services** | Socket state inspection (`ss`), interface management (`ip`), DNS resolution (`dig`/`nslookup`), SSH configuration. | [04-networking-and-services](./04-networking-and-services/) |
+| **05: Firewalls & Security** | `firewalld` rule management, port bindings, service exposure, base SELinux state triage. | [05-firewalls-and-security](./05-firewalls-and-security/) |
 
 ## 📜 Runbook Methodology
 
