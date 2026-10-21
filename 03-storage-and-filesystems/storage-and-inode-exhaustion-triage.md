@@ -8,7 +8,7 @@ understanding and learning `df -h`, `df -i`, `du -sh`.
 
 [root@localhost ~]# df -h  
 Filesystem               Size  Used Avail Use% Mounted on  
-`/dev/mapper/fedora-root   15G  2.6G   13G  17% /`
+==/dev/mapper/fedora-root   15G  2.6G   13G  17% /==
 devtmpfs                 952M     0  952M   0% /dev  
 tmpfs                    977M     0  977M   0% /dev/shm  
 tmpfs                    391M  968K  390M   1% /run  
