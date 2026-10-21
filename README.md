@@ -13,7 +13,7 @@ Operational runbooks, incident reports, and system administration drills execute
 
 ## 🛠️ Bare-Metal Host & Lab Environment Architecture
 
-All incident drills and service configurations are executed inside isolated, headless QEMU/KVM virtual machines hosted on a bare-metal Fedora workstation.
+All incident drills and service configurations are executed inside isolated, headless QEMU/KVM virtual machines hosted on a bare-metal Fedora workstation. LLM's like Gemini, Claude or GPT help me with creating the incidents and tickets simulations plus most of the guidance of how to deal with this new section of this field *while* I am still the one solving the tickets myself.
 
 ### Workstation Hardware & OS
 * **Host Model:** HP EliteBook 745 G6 (AMD Ryzen 7 PRO 3700U, 16GB RAM)
