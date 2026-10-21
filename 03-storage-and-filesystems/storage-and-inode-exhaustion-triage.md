@@ -7,7 +7,7 @@ understanding and learning `df -h`, `df -i`, `du -sh`.
 **Tested the current space empty on the desk 'the virtual qemu desk'**
 [root@localhost ~]# df -h  
 Filesystem               Size  Used Avail Use% Mounted on  
-==/dev/mapper/fedora-root   15G  2.6G   13G  17% /  ==
+==/dev/mapper/fedora-root   15G  2.6G   13G  17% /==
 devtmpfs                 952M     0  952M   0% /dev  
 tmpfs                    977M     0  977M   0% /dev/shm  
 tmpfs                    391M  968K  390M   1% /run  
@@ -28,7 +28,7 @@ tmpfs                    196M  4.0K  196M   1% /run/user/
 **Notice the increase in desk usage:**
 [root@localhost ~]# df -h  
 Filesystem               Size  Used Avail Use% Mounted on  
-==/dev/mapper/fedora-root   15G  2.8G   13G  19% /  ==
+==/dev/mapper/fedora-root   15G  2.8G   13G  19% /==
 devtmpfs                 952M     0  952M   0% /dev  
 tmpfs                    977M     0  977M   0% /dev/shm  
 tmpfs                    391M  968K  390M   1% /run  
@@ -43,7 +43,7 @@ tmpfs                    196M  4.0K  196M   1% /run/user/
 
 **Now, using du with the output pipelined to sort with -s for the biggest in size and -h for human readable.** 
 [root@localhost ~]# du -sh * | sort -hr  
-==200M    test_load.img  ==
+==200M    test_load.img==
 4.0K    anaconda-ks.cfg
 
 **Removing the file hogging the space**
@@ -54,7 +54,7 @@ tmpfs                    196M  4.0K  196M   1% /run/user/
 4.0K    anaconda-ks.cfg  
 [root@localhost ~]# df -h  
 Filesystem               Size  Used Avail Use% Mounted on  
-==/dev/mapper/fedora-root   15G  2.6G   13G  17% /  ==
+==/dev/mapper/fedora-root   15G  2.6G   13G  17% /==
 devtmpfs                 952M     0  952M   0% /dev  
 tmpfs                    977M     0  977M   0% /dev/shm  
 tmpfs                    391M  968K  390M   1% /run  
@@ -83,7 +83,7 @@ tmpfs                    249994     1  249993    1% /
 tmpfs                    819200   885  818315    1% /run  
 none                       1024     2    1022    1% /run/credentials/systemd-journald.service  
 none                       1024     2    1022    1% /run/credentials/systemd-resolved.service  
-==tmpfs                   1048576    26 1048550    1% /tmp  ==
+==tmpfs                   1048576    26 1048550    1% /tmp==
 /dev/sda2               1048576   364 1048212    1% /boot  
 none                       1024     2    1022    1% /run/credentials/serial-getty@ttyS0.service  
 none                       1024     2    1022    1% /run/credentials/getty@tty1.service  
@@ -99,7 +99,7 @@ tmpfs                    249994     1  249993    1% /
 tmpfs                    819200   885  818315    1% /run  
 none                       1024     2    1022    1% /run/credentials/systemd-journald.service  
 none                       1024     2    1022    1% /run/credentials/systemd-resolved.service  
-==tmpfs                   1048576 10925 1037651    2% /tmp  ==
+==tmpfs                   1048576 10925 1037651    2% /tmp==
 /dev/sda2               1048576   364 1048212    1% /boot  
 none                       1024     2    1022    1% /run/credentials/serial-getty@ttyS0.service  
 none                       1024     2    1022    1% /run/credentials/getty@tty1.service  
@@ -116,7 +116,7 @@ tmpfs                    977M     0  977M   0% /dev/sh
 tmpfs                    391M  968K  390M   1% /run  
 none                     1.0M     0  1.0M   0% /run/credentials/systemd-journald.service  
 none                     1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service  
-==tmpfs                    977M     0  977M   0% /tmp  ==
+==tmpfs                    977M     0  977M   0% /tmp==
 /dev/sda2                2.0G  478M  1.5G  25% /boot  
 none                     1.0M     0  1.0M   0% /run/credentials/serial-getty@ttyS0.service  
 none                     1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
@@ -131,7 +131,7 @@ tmpfs                    977M     0  977M   0% /dev/sh
 tmpfs                    391M  968K  390M   1% /run  
 none                     1.0M     0  1.0M   0% /run/credentials/systemd-journald.service  
 none                     1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service  
-==tmpfs                    977M     0  977M   0% /tmp  ==
+==tmpfs                    977M     0  977M   0% /tmp==
 /dev/sda2                2.0G  478M  1.5G  25% /boot  
 none                     1.0M     0  1.0M   0% /run/credentials/serial-getty@ttyS0.service  
 none                     1.0M     0  1.0M   0% /run/credentials/getty@tty1.service 
@@ -146,7 +146,7 @@ tmpfs                    196M  4.0K  196M   1% /run/user/
  55566 /sys/kernel  
  22910 /usr/share  
  22816 /usr/lib  
- ==10000 /tmp/inode_test  ==
+ ==10000 /tmp/inode_test==
   5995 /sys/devices  
   5875 /sys/fs  
   4170 /usr/lib64  
