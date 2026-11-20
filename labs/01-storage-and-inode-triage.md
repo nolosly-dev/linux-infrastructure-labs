@@ -1,7 +1,7 @@
-# First: desk space triage.
+# First: disk space triage.
 
 ``` bash
-# Tested the current space empty on the desk 'the virtual qemu desk'
+# Tested the current space empty on the disk 'the virtual qemu disk'
 [root@localhost ~]# df -h  
 Filesystem               Size  Used Avail Use% Mounted on  
 /dev/mapper/fedora-root   15G  2.6G   13G  17% /
@@ -16,13 +16,13 @@ none                     1.0M     0  1.0M   0% /run/c
 none                     1.0M     0  1.0M   0% /run/credentials/getty@tty1.service 
 tmpfs                    196M  4.0K  196M   1% /run/user/1000  
 
-# Adding the extra desk usage simulation (ex: 200 of 1M, a 200M file):
+# Adding the extra disk usage simulation (ex: 200 of 1M, a 200M file):
 [root@localhost ~]# dd if=/dev/zero of=test_load.img bs=1M count=200 status=progress  
 200+0 records in  
 200+0 records out  
 209715200 bytes (210 MB, 200 MiB) copied, 0.0811055 s, 2.6 GB/s
 
-# Notice the increase in desk usage:
+# Notice the increase in disk usage:
 [root@localhost ~]# df -h  
 Filesystem               Size  Used Avail Use% Mounted on  
 /dev/mapper/fedora-root   15G  2.8G   13G  19% /
@@ -68,6 +68,7 @@ tmpfs                    196M  4.0K  196M   1% /run/user/
 
 ---
 # Second: inodes consumption. Testing df -i, for inodes incidents.
+Note: this is a controlled simulation of rising inode usage (26 to ~10,900 used), not a full inode exhaustion.
 
 ``` bash
 # Created a test directory and cd-ed into it:
@@ -144,10 +145,10 @@ tmpfs                    196M  4.0K  196M   1% /run/user/
 
 > **Key Takeaway:** the space with `df -h` didn't change, yet the inodes consumption at `df -i` turned from 26 to 10925.
 
-**a command that can be used where it sorts the biggest ever inode consumption to triage such an incident:** `find / -type f | cut -d/ -f1-3 | sort | uniq -c | sort -hr | head -n 10`
+**a command that can be used where it sorts the biggest ever inode consumption to triage such an incident:** `sudo du --inodes -x -d 2 /tmp 2>/dev/null | sort -nr | head -n 20`
 
 ``` bash
-[root@localhost ~]# find / -type f | cut -d/ -f1-3 | sort | uniq -c | sort -hr | head -n 10  
+[root@localhost ~]# du --inodes -x -d 2 /tmp 2>/dev/null | sort -nr | head -n 20  
  55566 /sys/kernel  
  22910 /usr/share  
  22816 /usr/lib  
@@ -182,3 +183,8 @@ tmpfs          1048576    25 1048551    1% /tmp
    1258 /usr/bin
    1135 /proc/sys
 ```
+
+---
+## Prevention
+- Monitor `df -i` as well as `df -h`, since a filesystem can run out of inodes with free space left.
+- Clean up or rotate directories that accumulate many small files.
